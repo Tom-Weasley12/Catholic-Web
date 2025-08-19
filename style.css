@@ -1,4 +1,4 @@
-/* ===CSS original adaptado=== */
+/* ===CSS general (escritorio)=== */
 body {
     background-color: #EDE6DB;
     padding: 20px;
@@ -43,6 +43,7 @@ body {
     padding-bottom: 60px;
     margin-top: 100px;
     border-radius: 20px;
+    margin: 0 auto;
 }
 
 .creditos {
@@ -94,8 +95,9 @@ footer {
 #versiculoAleatorio {
     min-height: 100px; 
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -131,9 +133,9 @@ footer {
 
 .papa-container {
     text-align: center;
+    margin: 0 auto;
 }
 
-/* ===Secciones generales=== */
 section {
     min-height: 100vh;
     display: flex;
@@ -159,7 +161,6 @@ section {
     max-width: 700px;
 }
 
-/* Contenedor de imágenes flexibles */
 .contenedor-imagenes-papa {
     display: flex;
     justify-content: center;
@@ -181,7 +182,7 @@ section {
     transform: scale(1.2);
 }
 
-/* === MEDIA QUERIES para móviles y tablet === */
+/* === MEDIA QUERIES para móviles === */
 @media (max-width: 768px) {
     .titulo {
         font-size: 36px;
@@ -202,8 +203,12 @@ section {
         margin: 20px 10px;
     }
 
-    .imagen-papa, .imagen-rosario, .descripcion-papa {
-        margin-top: 10px;
+    .imagen-papa,
+    .imagen-rosario,
+    .descripcion-papa {
+        margin-top: 0;  /* elimina márgenes negativos */
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .papas h1, .fe h1 {
@@ -213,5 +218,12 @@ section {
     .fe p {
         font-size: 16px;
         max-width: 90%;
+    }
+
+    .contenedor,
+    .papa-container,
+    .contenedor-imagenes-papa {
+        margin: 0 auto;
+        text-align: center;
     }
 }
