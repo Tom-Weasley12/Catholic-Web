@@ -1,9 +1,10 @@
-/* ===CSS original=== */
+/* ===CSS original adaptado=== */
 body {
     background-color: #EDE6DB;
     padding: 20px;
     padding-bottom: 60px;
     overflow-y: scroll;
+    margin: 0;
 }
 
 .titulo {
@@ -69,14 +70,16 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
     margin: 40px 100px;
+    flex-wrap: wrap;
 }
 
 .imagen-papa {
     width: 450px;
-    height: 300px;
+    height: auto;
     margin-top: -80px;
     margin-left: -100px;
     border-radius: 20px;
+    max-width: 90%;
 }
 
 .versiculo-derecha h3 {
@@ -102,32 +105,27 @@ footer {
     align-items: flex-start;
     margin-top: 40px;
     width: 100%;
-}
-
-.imagen-papa {
-    width: 450px;
-    height: 300px;
-    margin-left: 0; 
-    margin-top: -250px; 
+    flex-wrap: wrap;
 }
 
 .imagen-rosario {
     width: 300px;
-    height: 500px;
+    height: auto;
     margin-right: 0;  
     margin-top: -275px;
     border-radius: 20px;
+    max-width: 90%;
 }
 
 .descripcion-papa {
     width: 450px;
-    height: 300px;
+    max-width: 90%;
+    height: auto;
     margin-left: 0; 
-    margin-top: 1px; 
+    margin-top: 8px; 
     font-size: 20px;
     color: #bcaa42;
     font-family: 'Lora', serif;
-    margin-top: 8px;
     font-style: italic;
 }
 
@@ -135,16 +133,15 @@ footer {
     text-align: center;
 }
 
-/* ===CSS para el resto de secciones=== */
+/* ===Secciones generales=== */
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
     box-sizing: border-box;
-    
 }
 
 .papas h1, .fe h1 {
@@ -162,7 +159,7 @@ section {
     max-width: 700px;
 }
 
-/* Contenedor para las imágenes nuevas (resto de secciones) */
+/* Contenedor de imágenes flexibles */
 .contenedor-imagenes-papa {
     display: flex;
     justify-content: center;
@@ -174,6 +171,7 @@ section {
 .contenedor-imagenes-papa img {
     height: 300px;
     width: auto;
+    max-width: 90%;
     border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     transition: transform 0.5s;
@@ -181,4 +179,39 @@ section {
 
 .contenedor-imagenes-papa img:hover {
     transform: scale(1.2);
+}
+
+/* === MEDIA QUERIES para móviles y tablet === */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 36px;
+    }
+
+    .descripcion {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+
+    .contenedor-versiculo {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 10px;
+    }
+
+    .imagen-papa, .imagen-rosario, .descripcion-papa {
+        margin-top: 10px;
+    }
+
+    .papas h1, .fe h1 {
+        font-size: 36px;
+    }
+
+    .fe p {
+        font-size: 16px;
+        max-width: 90%;
+    }
 }
