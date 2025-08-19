@@ -1,4 +1,3 @@
-/* ===CSS original adaptado=== */
 body {
     background-color: #EDE6DB;
     padding: 20px;
@@ -65,32 +64,6 @@ footer {
     z-index: 1000; 
 }
 
-.contenedor-versiculo {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin: 40px 100px;
-    flex-wrap: wrap;
-}
-
-.imagen-papa {
-    width: 450px;
-    height: auto;
-    margin-top: -80px;
-    margin-left: -100px;
-    border-radius: 20px;
-    max-width: 90%;
-}
-
-.versiculo-derecha h3 {
-    font-size: 22px;
-    color: #2C3E50;
-    font-family: 'Lora', serif;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-}
-
 #versiculoAleatorio {
     min-height: 100px; 
     display: flex;
@@ -106,6 +79,15 @@ footer {
     margin-top: 40px;
     width: 100%;
     flex-wrap: wrap;
+}
+
+.imagen-papa {
+    width: 450px;
+    height: auto;
+    margin-top: -80px;
+    margin-left: -100px;
+    border-radius: 20px;
+    max-width: 90%;
 }
 
 .imagen-rosario {
@@ -133,7 +115,6 @@ footer {
     text-align: center;
 }
 
-/* ===Secciones generales=== */
 section {
     min-height: 100vh;
     display: flex;
@@ -159,7 +140,6 @@ section {
     max-width: 700px;
 }
 
-/* Contenedor de imágenes flexibles */
 .contenedor-imagenes-papa {
     display: flex;
     justify-content: center;
@@ -181,37 +161,48 @@ section {
     transform: scale(1.2);
 }
 
-/* === MEDIA QUERIES para móviles y tablet === */
+/* === Animaciones === */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.wave {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to right, #EDE6DB, #2C3E50);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    animation: waveMove 2s infinite alternate;
+}
+
+@keyframes waveMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.contenedor-imagenes-papa img.fade-in {
+    transform: scale(0.9);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.contenedor-imagenes-papa img.fade-in.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* === MEDIA QUERIES === */
 @media (max-width: 768px) {
-    .titulo {
-        font-size: 36px;
-    }
-
-    .descripcion {
-        font-size: 18px;
-    }
-
-    footer {
-        font-size: 16px;
-        padding: 8px 0;
-    }
-
-    .contenedor-versiculo {
-        flex-direction: column;
-        align-items: center;
-        margin: 20px 10px;
-    }
-
-    .imagen-papa, .imagen-rosario, .descripcion-papa {
-        margin-top: 10px;
-    }
-
-    .papas h1, .fe h1 {
-        font-size: 36px;
-    }
-
-    .fe p {
-        font-size: 16px;
-        max-width: 90%;
-    }
+    .titulo { font-size: 36px; }
+    .descripcion { font-size: 18px; }
+    footer { font-size: 16px; padding: 8px 0; }
+    .contenedor-versiculo { flex-direction: column; align-items: center; margin: 20px 10px; }
+    .imagen-papa, .imagen-rosario, .descripcion-papa { margin-top: 10px; }
+    .papas h1, .fe h1 { font-size: 36px; }
+    .fe p { font-size: 16px; max-width: 90%; }
 }
