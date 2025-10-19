@@ -214,36 +214,21 @@ body {
   .imagen-papa, .imagen-rosario { max-width: 90%; margin: 0 auto; }
 }
 
-/* === Optimización para móviles === */
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 16px;
   }
-
-  .titulo {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 15px;
+  .logo {
+    justify-content: flex-start;
+    gap: 8px;
   }
-
-  .versiculo {
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: center;
-  }
-
-  .imagen {
-    display: block;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 350px;
-    height: auto;
-  }
-
-  footer {
-    font-size: 14px;
-    text-align: center;
-    padding: 15px;
-  }
+  .logo-img { width: 42px; height: 42px; }
+  .site-title { font-size: 18px; }
+  .hero-titulo { font-size: 22px; }
+  .cta-row { gap: 10px; }
+  .boton-cta { padding: 10px 16px; font-size: 15px; }
+  .versiculo-texto { font-size: 17px; }
+  .creditos { font-size: 13px; padding: 8px; }
 }
-
