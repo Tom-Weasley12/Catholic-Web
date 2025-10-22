@@ -49,9 +49,8 @@
 
         <section class="oracion" aria-labelledby="oracion-title">
           <h3 id="oracion-title">Oración del Día</h3>
-          <p id="texto-oracion">Señor, guíame con tu luz en este día y hazme instrumento de tu paz.</p>
+          <p id="texto-oracion"></p>
         </section>
-      </div>
     </section>
 
     <!-- IMAGENES / LEÓN Y ROSARIO -->
@@ -232,6 +231,56 @@
         .then(reg => console.log("Service Worker registrado ✅", reg))
         .catch(err => console.log("Error en Service Worker ❌", err));
     }
+
+    
+      // === Oraciones del día ===
+        
+        const oraciones = [
+          "Señor, guíame con tu luz en este día y hazme instrumento de tu paz.",
+          "Jesús, en Ti confío.",
+          "Espíritu Santo, ilumina mi mente y fortalece mi corazón.",
+          "Padre celestial, enséñame a amar como Tú amas.",
+          "María, Madre de Dios, acompáñame en cada paso de mi camino.",
+          "Señor, dame fuerzas para seguir tu voluntad con alegría.",
+          "Dios mío, en tus manos pongo mis miedos y esperanzas.",
+          "Señor, gracias por este día y por todo lo que me regalas.",
+          "Cristo, que mi corazón arda con tu amor.",
+          "Padre, dame paciencia en la prueba y humildad en el triunfo.",
+          "Jesús, enséñame a perdonar como Tú perdonas.",
+          "Señor, aumenta mi fe cuando la duda me visite.",
+          "Dios de misericordia, haz de mí un reflejo de tu bondad.",
+          "Señor, que nunca me aparte de tu camino.",
+          "Padre, que en cada palabra mía reine la paz.",
+          "Señor, que mi vida sea testimonio de tu amor.",
+          "Jesús, dame serenidad para aceptar lo que no puedo cambiar.",
+          "Espíritu Santo, transforma mi corazón y renueva mi alma.",
+          "Dios de amor, dame fortaleza en la dificultad.",
+          "Señor, ayúdame a ver tu rostro en los que sufren.",
+          "Padre, que mi fe sea firme aun en medio de la tormenta.",
+          "Jesús, confío en tu divina providencia.",
+          "Señor, líbrame de la tristeza y lléname de tu alegría.",
+          "María Santísima, intercede por mí ante tu Hijo.",
+          "Dios mío, dame sabiduría para decidir con rectitud.",
+          "Padre, enséñame a ser agradecido por lo pequeño.",
+          "Señor, que mi corazón no se canse de hacer el bien.",
+          "Jesús, que cada día me acerque más a tu Sagrado Corazón.",
+          "Espíritu Santo, dame claridad en mis pensamientos.",
+          "Padre eterno, en tus manos encomiendo mi vida.",
+          "Señor, que mi alma descanse en tu paz.",
+          "Dios de bondad, hazme instrumento de reconciliación.",
+          "Jesús, quédate conmigo en este día y siempre.",
+          "María, acompáñame en los momentos de oscuridad.",
+          "Padre celestial, dame valor para seguirte sin temor."
+        ];
+      
+        // Selecciona una oración según el día del año (0–364)
+        const diaDelAno = new Date().getDay() + Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)) % oraciones.length;
+        const indice = diaDelAno % oraciones.length;
+        
+        document.getElementById("texto-oracion").textContent = oraciones[indice];
+      </script>
+    
+    
   </script>
 </body>
 </html>
