@@ -293,7 +293,72 @@
     font-size: 14px;
     box-shadow: 0 -4px 14px rgba(0,0,0,0.03);
   }
-  
+
+    /* --- Salmo del día --- */
+.salmo {
+  margin-top: 24px;
+}
+
+.salmo .card-versiculo {
+  /* reutiliza el mismo estilo del versículo */
+  background: var(--card);
+  border: 1px solid rgba(212,175,55,0.18);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+}
+
+.salmo .versiculo-texto {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  color: var(--azul);
+  line-height: 1.5;
+  text-align: center;
+}
+ 
+/* ===== Secciones a pantalla completa ===== */
+.hero,
+.salmo,
+.papas {
+  min-height: 100vh;        /* cada sección ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* --- Colores de fondo personalizados --- */
+.hero {
+  background-color: #F5EEDF; /* marfil claro */
+}
+
+.salmo {
+  background-color: #ece7d9; /* tono intermedio, cálido */
+}
+
+.papas {
+  background-color: #F9F5EE; /* casi blanco, elegante */
+}
+
+/* --- Ajuste galería de papas --- */
+.papas .contenedor-imagenes-papa {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+}
+
+
   /* === Versión mejorada para móviles: galería de papas en dos columnas === */
 @media (max-width: 768px) {
     .contenedor-imagenes-papa {
@@ -341,4 +406,4 @@
     }
   }
   
-  
+
