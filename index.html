@@ -7,23 +7,22 @@
   <meta name="description" content="Palabra de Vida — Reflexiones y versículos diarios para alimentar la fe católica." />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#2C3E50">
   <link rel="icon" href="images/videa de fe.png" />
 </head>
 <body>
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="header-inner">
       <div class="logo">
-        <!-- Puedes reemplazar el texto por una imagen de logo si quieres -->
         <img src="images/Videa de Fe.png" alt="Palabra de Vida - logo" class="logo-img" />
         <h1 class="site-title">Vida de Fe</h1>
       </div>
-      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
+      <nav class="main-nav">
         <a href="#palabra">Palabra</a>
+        <a href="#salmo">Salmo</a>
         <a href="#papas">Papas</a>
         <a href="#fe">Fe</a>
         <a href="#contacto">Contacto</a>
@@ -32,255 +31,132 @@
   </header>
 
   <main>
-    <!-- HERO / INICIO -->
-    <section id="inicio" class="hero">
+    <!-- PALABRA DEL DÍA -->
+    <section id="palabra" class="hero">
       <div class="hero-content">
-        <h2 class="hero-titulo">Esta palabra la manda Dios para ti.</h2>
-        <p class="hero-sub">Que estas palabras te guíen y consoliden tu fe cada día.</p>
+        <h2 class="hero-titulo">Palabra del Día</h2>
+        <p class="hero-sub">Pulsa el botón y recibe la palabra que Dios tiene para ti hoy.</p>
 
         <div class="cta-row">
-          <button id="botonVersiculo" class="boton-cta" aria-controls="versiculoAleatorio">Obtener Palabra</button>
+          <button id="botonVersiculo" class="boton-cta">Obtener Palabra</button>
         </div>
 
-        <div id="versiculoAleatorio" class="card-versiculo" aria-live="polite">
-          <!-- Versículo aparecerá aquí -->
+        <div id="versiculoAleatorio" class="card-versiculo">
           <h3 class="placeholder">Pulsa "Obtener Palabra" para recibir una palabra de vida.</h3>
         </div>
-
-        <section class="oracion" aria-labelledby="oracion-title">
-          <h3 id="oracion-title">Oración del Día</h3>
-          <p id="texto-oracion"></p>
-        </section>
+      </div>
     </section>
 
-    <!-- IMAGENES / LEÓN Y ROSARIO -->
-    <section class="imagenes-principales" aria-label="Imágenes destacadas">
-      <div class="contenedor-imagenes">
-        <div class="papa-container contenido-leon">
-          <img src="images/leon14.jpg" alt="Papa León XIV" class="imagen-papa" loading="lazy">
-          <p class="descripcion-papa">
-            Su Santidad, el Papa Leon XIV, Pastor de la Iglesia y mensajero de paz.
-          </p>
+    <!-- SALMO DEL DÍA -->
+    <section id="salmo" class="salmo hero">
+      <div class="hero-content">
+        <h2 class="hero-titulo">Salmo del Día</h2>
+        <p class="hero-sub">Que este salmo te inspire y fortalezca tu fe.</p>
+
+        <div class="cta-row">
+          <button id="botonSalmo" class="boton-cta">Obtener Salmo</button>
         </div>
 
-        <div class="imagen-rosario-container">
-          <img src="images/rosario.jpg" alt="Rosario" class="imagen-rosario" loading="lazy">
+        <div id="salmoAleatorio" class="card-versiculo">
+          <h3 class="placeholder">Pulsa "Obtener Salmo" para recibir un salmo de vida.</h3>
         </div>
       </div>
     </section>
 
     <!-- PAPAS -->
-    <section id="papas" class="papas" aria-labelledby="papas-title">
-      <h2 id="papas-title">Los últimos cinco papas de la Iglesia</h2>
-      <div class="contenedor-imagenes-papa" role="list">
-        <figure role="listitem" class="papa-figure">
-          <img src="images/JP1.jpg" alt="Juan Pablo I" loading="lazy">
-          <figcaption>Juan Pablo I</figcaption>
-        </figure>
-        <figure role="listitem" class="papa-figure">
-          <img src="images/JP2.jpg" alt="Juan Pablo II" loading="lazy">
-          <figcaption>Juan Pablo II</figcaption>
-        </figure>
-        <figure role="listitem" class="papa-figure">
-          <img src="images/B16.jpg" alt="Benedicto XVI" loading="lazy">
-          <figcaption>Benedicto XVI</figcaption>
-        </figure>
-        <figure role="listitem" class="papa-figure">
-          <img src="images/francisco.jpg" alt="Francisco" loading="lazy">
-          <figcaption>Francisco</figcaption>
-        </figure>
-        <figure role="listitem" class="papa-figure">
-          <img src="images/leonvi.jpg" alt="León VI" loading="lazy">
-          <figcaption>León VI</figcaption>
-        </figure>
+    <section id="papas" class="papas">
+      <h2>Los últimos cinco Papas de la Iglesia</h2>
+      <div class="contenedor-imagenes-papa">
+        <figure class="papa-figure"><img src="images/JP1.jpg" alt="Juan Pablo I"><figcaption>Juan Pablo I</figcaption></figure>
+        <figure class="papa-figure"><img src="images/JP2.jpg" alt="Juan Pablo II"><figcaption>Juan Pablo II</figcaption></figure>
+        <figure class="papa-figure"><img src="images/B16.jpg" alt="Benedicto XVI"><figcaption>Benedicto XVI</figcaption></figure>
+        <figure class="papa-figure"><img src="images/francisco.jpg" alt="Francisco"><figcaption>Francisco</figcaption></figure>
+        <figure class="papa-figure"><img src="images/leonvi.jpg" alt="León VI"><figcaption>León VI</figcaption></figure>
       </div>
     </section>
 
     <!-- FE -->
-    <section id="fe" class="fe" aria-labelledby="fe-title">
-      <h2 id="fe-title">La Fe</h2>
-      <p>La fe es la creencia en Dios y en su poder para hacer lo que dice.</p>
+    <section id="fe" class="fe">
+      <h2>La Fe</h2>
+      <p>La fe es la confianza plena en Dios, en sus promesas y en su amor incondicional.</p>
     </section>
 
-    <!-- CONTACTO (placeholder simple) -->
-    <section id="contacto" class="contacto" aria-labelledby="contacto-title">
-      <h2 id="contacto-title">Contacto</h2>
-      <p>Si deseas colaborar, sugerir una oración o enviar un testimonio, escribe a: <a href="mailto:tombc07@gmail.com">tombc07@gmail.com</a></p>
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>Si deseas colaborar, sugerir contenido o enviar un testimonio, escribe a: 
+        <a href="mailto:tombc07@gmail.com">tombc07@gmail.com</a></p>
     </section>
   </main>
 
-  <footer id="footer" class="creditos" role="contentinfo">
-    <div class="footer-inner">
-      <p>Dios te ama</p>
-      <p>Desarrollado por un joven católico con ganas de predicar.</p>
-    </div>
+  <footer class="creditos">
+    <p>Dios te ama</p>
+    <p>Desarrollado por un joven católico con ganas de predicar.</p>
   </footer>
 
-  <!-- Versículos JS (con lectura opcional) -->
+  <!-- SCRIPT -->
   <script>
     const versiculos = [
-      "Porque yo sé los planes que tengo para ustedes. — Jeremías 29,11",
-      "El Señor es mi pastor, nada me faltará. — Salmo 23,1",
-      "Todo lo puedo en Cristo que me fortalece. — Filipenses 4,13",
-      "Amarás al Señor tu Dios con todo tu corazón. — Mateo 22,37",
-      "Dios es amor. — 1 Juan 4,8",
-      "No temas, porque yo estoy contigo. — Isaías 41,10",
-      "Sed fuertes y valientes. — Deuteronomio 31,6",
-      "Bienaventurados los que lloran, porque ellos serán consolados. — Mateo 5,4",
-      "El que cree en mí, aunque esté muerto, vivirá. — Juan 11,25",
-      "Estad siempre gozosos. — 1 Tesalonicenses 5,16",
-      "Orad sin cesar. — 1 Tesalonicenses 5,17",
-      "El Señor es mi fuerza y mi escudo. — Salmo 28,7",
-      "Jehová te bendiga y te guarde. — Números 6,24",
-      "Los que esperan a Jehová tendrán nuevas fuerzas. — Isaías 40,31"     ,
-      "Jehová va delante de ti; no te dejará. — Deuteronomio 31,8",
-      "Por fe andamos, no por vista. — 2 Corintios 5,7",
-      "Cree en el Señor Jesucristo, y serás salvo. — Hechos 16,31",
-      "Fíate de Jehová de todo tu corazón. — Proverbios 3,5",
-      "Hacedlo todo de corazón, como para el Señor. — Colosenses 3,23",
-      "El Señor es mi luz y mi salvación. — Salmo 27,1",
-      "Hagan todo con amor. — 1 Corintios 16,14",
-      "El Padre y yo uno somos. — Juan 10,30",
-      "Jesús lloró. — Juan 11,35",
-      "En el principio creó Dios los cielos y la tierra. — Génesis 1,1",
-      "Den gracias a Dios en toda situación. — 1 Tesalonicenses 5,18",
-      "El ángel de Jehová acampa alrededor de los que le temen. — Salmo 34,7",    
-      "La fe viene por el oír, y el oír, por la palabra de Dios. — Romanos 10,17",
-      "No nos cansemos de hacer el bien. — Gálatas 6,9",
-      "No seas sabio en tu propia opinión; teme a Jehová. — Proverbios 3,7",
-      "Buscad las cosas de arriba, donde está Cristo. — Colosenses 3,1",
-      "Concentren su atención en las cosas de arriba. — Colosenses 3,2",
-      "Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros. — Romanos 5,8",
-      "Mira que estoy a la puerta y llamo. — Apocalipsis 3,20",
-      "El que sabe hacer lo bueno y no lo hace, le es pecado. — Santiago 4,17",
-      "No contristéis al Espíritu Santo de Dios. — Efesios 4,30",
-      "¡Mirad cuán bueno y cuán delicioso es habitar los hermanos juntos en armonía! — Salmo 133,1",
-      "Sed más que vencedores por medio de aquel que nos amó. — Romanos 8,37",
-      "Si se humillare mi pueblo... yo oiré desde los cielos, y sanaré su tierra. — 2 Crónicas 7,14",
-      "Aunque ande en valle de sombra de muerte, no temeré mal alguno. — Salmo 23,4",
-      "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito. — Juan 3,16",
       "Clama a mí, y yo te responderé. — Jeremías 33,3",
-      "Confía en el Señor y haz el bien. — Salmo 37,3",
-      "No se turbe vuestro corazón, ni tenga miedo. — Juan 14,27",
-      "Sean fuertes y valientes; no teman ni se asusten. — Josué 1,9",
-      "Yo soy el camino, la verdad y la vida. — Juan 14,6",
-      "La paz os dejo, mi paz os doy. — Juan 14,27",
-      "El justo por la fe vivirá. — Romanos 1,17",
-      "Alegraos en la esperanza, sed pacientes en la tribulación. — Romanos 12,12",
-      "Todo tiene su tiempo. — Eclesiastés 3,1",
-      "El amor nunca deja de ser. — 1 Corintios 13,8",
-      "El Señor peleará por vosotros. — Éxodo 14,14",
-      "No te desampararé ni te dejaré. — Hebreos 13,5",
-      "Yo estaré contigo todos los días, hasta el fin del mundo. — Mateo 28,20",
-      "Guarda silencio ante Jehová, y espera en él. — Salmo 37,7",
-      "Dame entendimiento para guardar tu ley. — Salmo 119,34",
-      "Esforzaos y cobrad ánimo. — Salmo 31,24",
-      "La lámpara del cuerpo es el ojo. — Mateo 6,22",
-      "Los que buscan al Señor no tendrán falta de ningún bien. — Salmo 34,10",
-      "Jehová es mi pastor; nada me faltará. — Salmo 23,1",
-      "Mi poder se perfecciona en la debilidad. — 2 Corintios 12,9",
-      "En Dios solamente está acallada mi alma. — Salmo 62,1",
-      "Bienaventurado el hombre que confía en Jehová. — Jeremías 17,7",
-      "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. — Salmo 91,1",
-      "Encomienda a Jehová tu camino, y confía en él. — Salmo 37,5",
-      "El que habita en el amor, habita en Dios. — 1 Juan 4,16",
-      "Dios no es hombre para que mienta. — Números 23,19",
-      "El que comenzó en vosotros la buena obra, la perfeccionará. — Filipenses 1,6",
-      "Mi ayuda viene de Jehová. — Salmo 121,2",
-      "El corazón alegre hermosea el rostro. — Proverbios 15,13",
-      "El que guarda su boca guarda su alma. — Proverbios 13,3"
+     "Confía en el Señor y haz el bien. — Salmo 37,3",
+     "No se turbe vuestro corazón, ni tenga miedo. — Juan 14,27",
+     "Sean fuertes y valientes; no teman ni se asusten. — Josué 1,9",
+     "Yo soy el camino, la verdad y la vida. — Juan 14,6",
+     "La paz os dejo, mi paz os doy. — Juan 14,27",
+     "El justo por la fe vivirá. — Romanos 1,17",
+     "Alegraos en la esperanza, sed pacientes en la tribulación. — Romanos 12,12",
+     "Todo tiene su tiempo. — Eclesiastés 3,1",
+     "El amor nunca deja de ser. — 1 Corintios 13,8",
+     "El Señor peleará por vosotros. — Éxodo 14,14",
+     "No te desampararé ni te dejaré. — Hebreos 13,5",
+     "Yo estaré contigo todos los días, hasta el fin del mundo. — Mateo 28,20",
+     "Guarda silencio ante Jehová, y espera en él. — Salmo 37,7",
+     "Dame entendimiento para guardar tu ley. — Salmo 119,34",
+     "Esforzaos y cobrad ánimo. — Salmo 31,24",
+     "La lámpara del cuerpo es el ojo. — Mateo 6,22",
+     "Los que buscan al Señor no tendrán falta de ningún bien. — Salmo 34,10",
+     "Jehová es mi pastor; nada me faltará. — Salmo 23,1",
+     "Mi poder se perfecciona en la debilidad. — 2 Corintios 12,9",
+     "En Dios solamente está acallada mi alma. — Salmo 62,1",
+     "Bienaventurado el hombre que confía en Jehová. — Jeremías 17,7",
+     "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. — Salmo 91,1",
+     "Encomienda a Jehová tu camino, y confía en él. — Salmo 37,5",
+     "El que habita en el amor, habita en Dios. — 1 Juan 4,16",
+     "Dios no es hombre para que mienta. — Números 23,19",
+     "El que comenzó en vosotros la buena obra, la perfeccionará. — Filipenses 1,6",
+     "Mi ayuda viene de Jehová. — Salmo 121,2",
+     "El corazón alegre hermosea el rostro. — Proverbios 15,13",
+     "El que guarda su boca guarda su alma. — Proverbios 13,3"
+
     ];
 
-    const boton = document.getElementById("botonVersiculo");
-    const contenedor = document.getElementById("versiculoAleatorio");
-    const botonAudio = document.getElementById("botonAudio");
+    const salmos = [
+      "El Señor es mi roca, mi fortaleza y mi libertador. — Salmo 18,2",
+      "Encomienda a Jehová tu camino, y confía en Él. — Salmo 37,5",
+      "El Señor peleará por vosotros. — Éxodo 14,14",
+      "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente. — Salmo 91,1",
+      "Cantad al Señor, porque ha hecho maravillas. — Isaías 12,5",
+      "El Señor sostiene a todos los que caen. — Salmo 145,14",
+      "Bendice, alma mía, al Señor. — Salmo 103,1"
+    ];
 
-    function mostrarVersiculo(texto) {
-      contenedor.innerHTML = `<h3 class="versiculo-texto">${texto}</h3>`;
-      contenedor.classList.remove("show");
-      // restart animation
-      void contenedor.offsetWidth;
-      contenedor.classList.add("show");
-    }
-
-    boton.addEventListener("click", () => {
+    const botonVersiculo = document.getElementById("botonVersiculo");
+    const contenedorVersiculo = document.getElementById("versiculoAleatorio");
+    botonVersiculo.addEventListener("click", () => {
       const aleatorio = Math.floor(Math.random() * versiculos.length);
-      mostrarVersiculo(versiculos[aleatorio]);
+      contenedorVersiculo.innerHTML = `<h3 class="versiculo-texto">${versiculos[aleatorio]}</h3>`;
+      contenedorVersiculo.classList.add("show");
+      setTimeout(() => contenedorVersiculo.classList.remove("show"), 800);
     });
 
-    // Lectura por voz (speechSynthesis) - botón toggle
-    botonAudio.addEventListener("click", () => {
-      const texto = contenedor.textContent.trim();
-      if (!texto) return;
-      // toggle aria-pressed
-      const pressed = botonAudio.getAttribute("aria-pressed") === "true";
-      botonAudio.setAttribute("aria-pressed", String(!pressed));
-      // speak once
-      if (!pressed) {
-        const utter = new SpeechSynthesisUtterance(texto);
-        utter.lang = "es-ES";
-        speechSynthesis.speak(utter);
-      } else {
-        speechSynthesis.cancel();
-      }
+    const botonSalmo = document.getElementById("botonSalmo");
+    const contenedorSalmo = document.getElementById("salmoAleatorio");
+    botonSalmo.addEventListener("click", () => {
+      const aleatorio = Math.floor(Math.random() * salmos.length);
+      contenedorSalmo.innerHTML = `<h3 class="versiculo-texto">${salmos[aleatorio]}</h3>`;
+      contenedorSalmo.classList.add("show");
+      setTimeout(() => contenedorSalmo.classList.remove("show"), 800);
     });
-
-    // Service worker (mantengo tu lógica original)
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js")
-        .then(reg => console.log("Service Worker registrado ✅", reg))
-        .catch(err => console.log("Error en Service Worker ❌", err));
-    }
-
-    
-      // === Oraciones del día ===
-        
-        const oraciones = [
-          "Señor, guíame con tu luz en este día y hazme instrumento de tu paz.",
-          "Jesús, en Ti confío.",
-          "Espíritu Santo, ilumina mi mente y fortalece mi corazón.",
-          "Padre celestial, enséñame a amar como Tú amas.",
-          "María, Madre de Dios, acompáñame en cada paso de mi camino.",
-          "Señor, dame fuerzas para seguir tu voluntad con alegría.",
-          "Dios mío, en tus manos pongo mis miedos y esperanzas.",
-          "Señor, gracias por este día y por todo lo que me regalas.",
-          "Cristo, que mi corazón arda con tu amor.",
-          "Padre, dame paciencia en la prueba y humildad en el triunfo.",
-          "Jesús, enséñame a perdonar como Tú perdonas.",
-          "Señor, aumenta mi fe cuando la duda me visite.",
-          "Dios de misericordia, haz de mí un reflejo de tu bondad.",
-          "Señor, que nunca me aparte de tu camino.",
-          "Padre, que en cada palabra mía reine la paz.",
-          "Señor, que mi vida sea testimonio de tu amor.",
-          "Jesús, dame serenidad para aceptar lo que no puedo cambiar.",
-          "Espíritu Santo, transforma mi corazón y renueva mi alma.",
-          "Dios de amor, dame fortaleza en la dificultad.",
-          "Señor, ayúdame a ver tu rostro en los que sufren.",
-          "Padre, que mi fe sea firme aun en medio de la tormenta.",
-          "Jesús, confío en tu divina providencia.",
-          "Señor, líbrame de la tristeza y lléname de tu alegría.",
-          "María Santísima, intercede por mí ante tu Hijo.",
-          "Dios mío, dame sabiduría para decidir con rectitud.",
-          "Padre, enséñame a ser agradecido por lo pequeño.",
-          "Señor, que mi corazón no se canse de hacer el bien.",
-          "Jesús, que cada día me acerque más a tu Sagrado Corazón.",
-          "Espíritu Santo, dame claridad en mis pensamientos.",
-          "Padre eterno, en tus manos encomiendo mi vida.",
-          "Señor, que mi alma descanse en tu paz.",
-          "Dios de bondad, hazme instrumento de reconciliación.",
-          "Jesús, quédate conmigo en este día y siempre.",
-          "María, acompáñame en los momentos de oscuridad.",
-          "Padre celestial, dame valor para seguirte sin temor."
-        ];
-      
-        // Selecciona una oración según el día del año (0–364)
-        const diaDelAno = new Date().getDay() + Math.floor(new Date().getTime() / (1000 * 60 * 60 * 24)) % oraciones.length;
-        const indice = diaDelAno % oraciones.length;
-        
-        document.getElementById("texto-oracion").textContent = oraciones[indice];
-      </script>
-    
-    
   </script>
 </body>
 </html>
