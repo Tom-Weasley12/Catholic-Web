@@ -358,6 +358,118 @@ main {
   max-width: 1000px;
 }
 
+/* === ROSARIO === */
+.rosario {
+  background: #F3E9DB; /* tono intermedio entre "Palabra" y "Papas" */
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid #c9a227;
+  border-bottom: 3px solid #c9a227;
+}
+
+.rosario h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #6B2737;
+}
+
+.rosario-sub {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+#rosario-start,
+#next {
+  background: #6B2737; /* vino */
+  color: #fff8f0;      /* marfil suave */
+  border: 2px solid #c9a227; /* dorado */
+  padding: 12px 32px;
+  border-radius: 999px; /* forma de pastilla */
+  font-size: 1.1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+#rosario-start:hover,
+#next:hover {
+  background: #8a3147; /* vino claro */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+}
+
+#rosario-start:active,
+#next:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.rosario-cuentas {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.cuenta {
+  width: 14px;
+  height: 14px;
+  background: #c9a227; /* dorado */
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  transform: scale(1);
+  transition: transform 0.45s ease, opacity 0.45s ease;
+  animation: respirar 2.8s ease-in-out infinite;
+}
+
+/* Respiración suave */
+@keyframes respirar {
+  0%   { transform: scale(1);   opacity: 0.9; }
+  50%  { transform: scale(1.12); opacity: 1; }
+  100% { transform: scale(1);   opacity: 0.9; }
+}
+
+/* Cuando la cuenta está activa */
+.cuenta.active {
+  background: #6B2737; /* vino */
+  box-shadow: 0 0 12px #6B2737aa, 0 0 18px #c9a22766;
+  transform: scale(1.45);
+  opacity: 1;
+  animation: latido 0.55s ease-out forwards;
+}
+
+/* Animación del “latido” al cambiar */
+@keyframes latido {
+  0%   { transform: scale(1); }
+  65%  { transform: scale(1.55); }
+  100% { transform: scale(1.45); }
+}
+
+
+/* Cuentas del Rosario */
+.rosario-cuentas {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.cuenta {
+  width: 18px;
+  height: 18px;
+  background: #d6c8b8;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.cuenta.activa {
+  background: #c9a227; /* dorado */
+}
+
 
   /* === Versión mejorada para móviles: galería de papas en dos columnas === */
 @media (max-width: 768px) {
@@ -406,4 +518,3 @@ main {
     }
   }
   
-
