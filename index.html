@@ -26,6 +26,7 @@
         <a href="#papas">Papas</a>
         <a href="#fe">Fe</a>
         <a href="#contacto">Contacto</a>
+        <a href="#rosario">Rosario</a>
       </nav>
     </div>
   </header>
@@ -46,6 +47,21 @@
         </div>
       </div>
     </section>
+
+    <section class="rosario" id="rosario">
+  <h3>Rosario</h3>
+  <p class="rosario-sub">Reza paso a paso</p>
+
+  <div id="rosario-contenido">
+    <button id="rosario-start">Comenzar</button>
+  </div>
+
+  <!-- Visualizador de cuentas -->
+  <div class="rosario-cuentas" id="rosario-cuentas" style="display:none;">
+    <!-- Las cuentas se generan por JS -->
+  </div>
+</section>
+
 
     <!-- SALMO DEL DÍA -->
     <section id="salmo" class="salmo hero">
@@ -139,6 +155,68 @@
       "El Señor sostiene a todos los que caen. — Salmo 145,14",
       "Bendice, alma mía, al Señor. — Salmo 103,1"
     ];
+
+    const oraciones = [
+      "✝️ En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.",
+      "Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.",
+      "Dios te salve Maria, llena eres de gracia el Señor es contigo. Bendita tu eres entre todas las mujeres y bendito es el fruto de tu viente Jesus. Santa Maria, Madre de Dios, ruega por nosotros pecadores ahora y en la hora de nuestra muerte. Amen.",
+      "Dios te salve Maria, llena eres de gracia el Señor es contigo. Bendita tu eres entre todas las mujeres y bendito es el fruto de tu viente Jesus. Santa Maria, Madre de Dios, ruega por nosotros pecadores ahora y en la hora de nuestra muerte. Amen.",
+      "Dios te salve Maria, llena eres de gracia el Señor es contigo. Bendita tu eres entre todas las mujeres y bendito es el fruto de tu viente Jesus. Santa Maria, Madre de Dios, ruega por nosotros pecadores ahora y en la hora de nuestra muerte. Amen.",
+      "Gloria al Padre y al Hijo y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+      "Creo en Dios, Padre Todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la santa Iglesia católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.", 
+      // 10 Ave Marías (rosario simple)
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Dios te salve María, llena eres de gracia, el Señor es contigo. Bendita tú eres entre todas las mujeres y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros pecadores, ahora y en la hora de nuestra muerte. Amén.",
+      "Gloria al Padre y al Hijo y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén.",
+      "Padre nuestro, que estás en el cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén."
+    ];
+
+let index = 0;
+
+const contenedor = document.getElementById("rosario-contenido");
+const cuentasContainer = document.getElementById("rosario-cuentas");
+const startBtn = document.getElementById("rosario-start");
+
+function generarCuentas() {
+  cuentasContainer.innerHTML = "";
+  for (let i = 0; i < 10; i++) {
+    let c = document.createElement("div");
+    c.classList.add("cuenta");
+    cuentasContainer.appendChild(c);
+  }
+}
+
+startBtn.addEventListener("click", () => {
+  index = 0;
+  contenedor.innerHTML = `<p id="oracion-texto">${oraciones[index]}</p><button id="next">Siguiente</button>`;
+  cuentasContainer.style.display = "flex";
+  generarCuentas();
+  actualizarCuentas();
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.id === "next") {
+    index++;
+    if (index >= oraciones.length) index = 1; // vuelve a los Ave María
+    document.getElementById("oracion-texto").innerText = oraciones[index];
+    actualizarCuentas();
+  }
+});
+
+function actualizarCuentas() {
+  const cuentas = document.querySelectorAll(".cuenta");
+  let pos = (index - 6) % 10;
+  if (pos < 0) pos = 0;
+  cuentas.forEach((c, i) => c.classList.toggle("activa", i === pos));
+}
 
     const botonVersiculo = document.getElementById("botonVersiculo");
     const contenedorVersiculo = document.getElementById("versiculoAleatorio");
